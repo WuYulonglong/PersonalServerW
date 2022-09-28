@@ -1,0 +1,26 @@
+nacosconfig:
+  url: 10.10.22.149
+  port: 5555
+
+
+spring:
+  application:
+    name: bs
+  cloud:
+    nacos:
+      discovery:
+        port: 5555
+        server-addr: ${nacosconfig.url}:${nacosconfig.port}
+      config:
+        server-addr: ${nacosconfig.url}:${nacosconfig.port}
+        group: ee
+        # 配置格式
+        file-extension: yaml
+        prefix: ${spring.application.name}
+        namespace:
+
+server:
+  port: 18080
+
+test:
+  kk: xyz
