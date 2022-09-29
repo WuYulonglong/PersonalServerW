@@ -13,6 +13,6 @@ public class ConfigController {
 
     @RequestMapping("/")
     public String showConfigValue(){
-        return configValue.getKk();
+        return configValue.getMsg();
     }
 }

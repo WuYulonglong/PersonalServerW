@@ -13,7 +13,7 @@ spring:
         server-addr: ${nacosconfig.url}:${nacosconfig.port}
       config:
         server-addr: ${nacosconfig.url}:${nacosconfig.port}
-        group: ee
+        group: PersonalServer
         # 配置格式
         file-extension: yaml
         prefix: ${spring.application.name}
@@ -22,5 +22,5 @@ spring:
 server:
   port: 18080
 
-test:
-  kk: xyz
+nacos:
+  msg: xyz

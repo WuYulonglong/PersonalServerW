@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 @RefreshScope
 @Configuration
 @Data
-@ConfigurationProperties("test")
+@ConfigurationProperties("nacos")
 public class ConfigValue {
-    private String kk;
+    private String msg;
 }
