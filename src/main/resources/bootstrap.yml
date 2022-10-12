@@ -23,7 +23,7 @@ server:
   port: 18080
 
 nacos:
-  msg: xyz
+  msg: '@env@'
 
 mybatis-plus:
   configuration:

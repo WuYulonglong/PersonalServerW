@@ -30,6 +30,7 @@ public class SwaggerConfig {
                 .select()
                 // 扫描所有有注解的api，用这种方式更灵活
                 //.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
+                //扫描需要被暴露的controller接口存放位置
                 .apis(RequestHandlerSelectors.basePackage("com.yuul.bus.businessserver.controller"))
                 // 扫描所有 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any()).build();

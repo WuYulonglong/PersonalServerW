@@ -136,6 +136,28 @@
     </profiles>
 
     <build>
+        <filters>
+            <filter>src/main/resources/application-${env}.yml</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- 资源根目录排除各环境的配置，防止在生成目录中多余其它目录 *一级目录 **包含子目录 -->
+                <excludes>
+                    <exclude>/**</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <!-- 资源根目录排除各环境的配置，防止在生成目录中多余其它目录 *一级目录 **包含子目录 -->
+                <includes>
+                    <include>/application-${env}.yml</include>
+                    <include>/bootstrap.yml</include>
+                    <include>/application.yml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
